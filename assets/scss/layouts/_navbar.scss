@@ -1,0 +1,28 @@
+nav {
+    padding: 0 20px 0;
+    height: 63px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+        width: 162px;
+        height: 44px;
+    }
+
+    img:hover,
+    svg:hover {
+        cursor: pointer;
+    }
+
+    @include responsive('desktop') {
+        padding: 0 20px 0;
+        height: 96px;
+
+        img {
+            width: 200px;
+            height: 34.2px;
+        }
+    }
+}

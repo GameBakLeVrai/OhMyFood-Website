@@ -1,8 +1,11 @@
-/* ----- Default Setup ----- */
+/* ----------- Import Font ----------- */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+/* ----------- Default Setup ----------- */
 * {
   margin: 0;
   padding: 0;
   color: black;
+  font-family: "Roboto", sans-serif;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -23,7 +26,7 @@ a {
   text-decoration: none;
 }
 
-/* ----- Custom ScrollBar ----- */
+/* ----------- Custom ScrollBar ----------- */
 /* Firefox */
 * {
   scrollbar-width: thin;
@@ -46,6 +49,32 @@ a {
 
 *::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.937254902);
+}
+
+nav {
+  padding: 0 20px 0;
+  height: 63px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav img {
+  width: 162px;
+  height: 44px;
+}
+nav img:hover,
+nav svg:hover {
+  cursor: pointer;
+}
+@media (min-width: 992px) {
+  nav {
+    padding: 0 20px 0;
+    height: 96px;
+  }
+  nav img {
+    width: 200px;
+    height: 34.2px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
