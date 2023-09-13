@@ -1,0 +1,68 @@
+/* ----- Default Setup ----- */
+
+// Micro clearfix
+%cf:before,
+%cf:after {
+    content: " ";
+    display: table;
+}
+%cf:after {
+    clear: both;
+}
+
+* {
+    margin: 0;
+	padding: 0;
+
+    color: black;
+
+	// Remove element selections
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+// Remove default margin 
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+}
+
+// Remove list style
+ul {
+	list-style-type: none;
+}
+
+// Remove link sublines
+a {
+	text-decoration: none;
+}
+
+/* ----- Custom ScrollBar ----- */
+
+/* Firefox */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: #ffffffbd #03020F;
+}
+
+// Chrome, Edge, and Safari
+*::-webkit-scrollbar {
+	width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+	background: #03020F;
+	border-radius: 20px;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #ffffffb7;
+	border-radius: 20px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+	background: #ffffffef;
+}
