@@ -1,10 +1,8 @@
 nav {
     padding: 0 20px 0;
-    height: 63px;    
+    height: 63px;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flexbox($justify: space-between, $align: center);
 
     img:last-child {
         width: 162px;

@@ -1,14 +1,12 @@
+// Header Section
+
 header {
     background: $main-color--bg;
 
     .header-top__container {
         height: 50px;
         
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        
+        @include flexbox($justify: center, $align: center, $gap: 20px);        
         background: $secondary-color--bg;    
     
         @include responsive("phone", "max") {
@@ -16,9 +14,7 @@ header {
         }
     
         p {
-            font-size: 16px;
-            font-weight: 500;
-            
+            @include text($fontSize: 16px, $fontWeight: 500);
             color: $grey-color;
         }
     }
@@ -26,25 +22,85 @@ header {
     .header-text__container {
         padding: 50px;
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-        
+        @include flexbox($direction: column, $justify: center, $align: center, $gap: 30px);
         text-align: center;
-        
+
         h1 {
-            font-size: 24px;
-            font-weight: 700;
-        
             @include responsive("desktop") {
                 font-size: 40px;
             }
         }
 
         p {
-            font-size: 18px;
-            font-weight: 300;
+            @include text($fontSize: 18px, $fontWeight: 300);
         }
+    }
+}
+
+// Fonctionnement and Restaurants Section
+
+.fonctionnement-and-restaurants {
+    padding: 20px;   
+
+    .fonctionnement-and-restaurants__container {
+        padding: 50px 0;
+        @include flexbox($direction: column, $justify: center, $gap: 20px);
+    }
+
+    @include responsive("desktop") {
+        padding: unset;
+
+        .fonctionnement-and-restaurants__container {
+            margin: 0 auto;
+            max-width: 1300px;
+            width: 100%;
+
+            &:first-child {
+                padding: 50px 180px;
+            }
+
+            &:nth-child(2) {
+                background-color: $main-color--bg;
+                padding: 0 180px;
+            }
+        }
+    }
+}
+
+// Fonctionnement Section
+
+.fonctionnements {
+    @include flexbox($align: end, $direction: column, $gap: 20px);
+
+    &__card {
+        width: 100%;
+        height: 72.38px;
+        
+        @include flexbox($align: center, $gap: 20px);
+        @include text($fontSize: 16px, $fontWeight: 500);
+
+        background: #F7F7F7;
+    
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
+
+        span {
+            margin-left: -10px;
+
+            width: 24px;
+            height: 24px;
+
+            @include flexbox($justify: center, $align: center);
+            @include text($fontSize: 14.18px, $fontWeight: 500);
+
+            color: white;
+            background: $violet-color;
+
+            border-radius: 50%;
+        }
+    }
+
+    @include responsive("desktop", "min") {
+        flex-direction: unset;
     }
 }

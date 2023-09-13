@@ -6,6 +6,7 @@
   padding: 0;
   color: black;
   font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -51,12 +52,15 @@ a {
   background: rgba(255, 255, 255, 0.937254902);
 }
 
+/* ------------ FlexBox Mixin ------------*/
+/* ------------ Responsive Mixin ------------*/
+/* ------------ TextSize and Weight Mixin ------------*/
 .gradiant-button {
   cursor: pointer;
   width: 218px;
   height: 50px;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   color: #FFFFFF;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   border: none;
@@ -64,12 +68,50 @@ a {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
+.text__title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.menu__title {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.menu__subtitle {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.menu-card__title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.menu-card__subtitle {
+  font-size: 15.04px;
+  font-weight: 300;
+}
+
+.card__title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.card__subtitle {
+  font-size: 17px;
+  font-weight: 300;
+}
+
 nav {
   padding: 0 20px 0;
   height: 63px;
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0px;
 }
 nav img:last-child {
   width: 162px;
@@ -94,8 +136,10 @@ header {
 header .header-top__container {
   height: 50px;
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
   gap: 20px;
   background: #EAEAEA;
 }
@@ -113,13 +157,11 @@ header .header-text__container {
   padding: 50px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
   gap: 30px;
   text-align: center;
-}
-header .header-text__container h1 {
-  font-size: 24px;
-  font-weight: 700;
 }
 @media (min-width: 992px) {
   header .header-text__container h1 {
@@ -129,6 +171,81 @@ header .header-text__container h1 {
 header .header-text__container p {
   font-size: 18px;
   font-weight: 300;
+}
+
+.fonctionnement-and-restaurants {
+  padding: 20px;
+}
+.fonctionnement-and-restaurants .fonctionnement-and-restaurants__container {
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+@media (min-width: 992px) {
+  .fonctionnement-and-restaurants {
+    padding: unset;
+  }
+  .fonctionnement-and-restaurants .fonctionnement-and-restaurants__container {
+    margin: 0 auto;
+    max-width: 1300px;
+    width: 100%;
+  }
+  .fonctionnement-and-restaurants .fonctionnement-and-restaurants__container:first-child {
+    padding: 50px 180px;
+  }
+  .fonctionnement-and-restaurants .fonctionnement-and-restaurants__container:nth-child(2) {
+    background-color: #F6F6F6;
+    padding: 0 180px;
+  }
+}
+
+.fonctionnements {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: end;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+.fonctionnements__card {
+  width: 100%;
+  height: 72.38px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  background: #F7F7F7;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+}
+.fonctionnements__card span {
+  margin-left: -10px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0px;
+  font-size: 14.18px;
+  font-weight: 500;
+  color: white;
+  background: #9356DC;
+  border-radius: 50%;
+}
+@media (min-width: 992px) {
+  .fonctionnements {
+    flex-direction: unset;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
