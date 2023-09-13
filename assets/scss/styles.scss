@@ -6,8 +6,10 @@
 @import "./utils/mixins";
 
 // Components Importation
+@import "./components/buttons";
 
 // Layouts Importation
 @import './layouts/navbar';
 
 // Pages Importation
+@import "./pages/home";

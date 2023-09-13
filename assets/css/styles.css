@@ -51,6 +51,19 @@ a {
   background: rgba(255, 255, 255, 0.937254902);
 }
 
+.gradiant-button {
+  cursor: pointer;
+  width: 218px;
+  height: 50px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #FFFFFF;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
 nav {
   padding: 0 20px 0;
   height: 63px;
@@ -58,23 +71,64 @@ nav {
   align-items: center;
   justify-content: space-between;
 }
-nav img {
+nav img:last-child {
   width: 162px;
   height: 44px;
 }
-nav img:hover,
-nav svg:hover {
+nav img:hover {
   cursor: pointer;
 }
 @media (min-width: 992px) {
   nav {
-    padding: 0 20px 0;
     height: 96px;
   }
   nav img {
     width: 200px;
     height: 34.2px;
   }
+}
+
+header {
+  background: #F6F6F6;
+}
+header .header-top__container {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background: #EAEAEA;
+}
+@media (max-width: 767px) {
+  header .header-top__container {
+    box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+  }
+}
+header .header-top__container p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #353535;
+}
+header .header-text__container {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+}
+header .header-text__container h1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+@media (min-width: 992px) {
+  header .header-text__container h1 {
+    font-size: 40px;
+  }
+}
+header .header-text__container p {
+  font-size: 18px;
+  font-weight: 300;
 }
 
 /*# sourceMappingURL=styles.css.map */

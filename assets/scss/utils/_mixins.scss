@@ -1,14 +1,20 @@
 // Source : https://css-tricks.com/snippets/sass/mixin-manage-breakpoints/
 
 $breakpoints: (
-	'phone': 767px,
-	'desktop': 992px
+	"phone": 767px,
+	"desktop": 992px
 ) !default;
 
-@mixin responsive($breakpoint) {
+@mixin responsive($breakpoint, $type: "min") {
 	@if map-has-key($breakpoints, $breakpoint) {
-		@media (min-width: map-get($breakpoints, $breakpoint)) {
-			@content;
-		}
+		@if $type == "min" {
+			@media (min-width: map-get($breakpoints, $breakpoint)) {
+				@content;
+			}
+		} @else if $type == "max" {
+			@media (max-width: map-get($breakpoints, $breakpoint)) {
+				@content;
+			}
+		}		
 	}
 }

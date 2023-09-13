@@ -1,23 +1,21 @@
 nav {
     padding: 0 20px 0;
-    height: 63px;
-    
+    height: 63px;    
+
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    img {
+    img:last-child {
         width: 162px;
         height: 44px;
     }
 
-    img:hover,
-    svg:hover {
+    img:hover {
         cursor: pointer;
     }
 
-    @include responsive('desktop') {
-        padding: 0 20px 0;
+    @include responsive("desktop") {
         height: 96px;
 
         img {

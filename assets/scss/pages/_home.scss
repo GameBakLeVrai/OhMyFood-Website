@@ -1,0 +1,50 @@
+header {
+    background: $main-color--bg;
+
+    .header-top__container {
+        height: 50px;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        
+        background: $secondary-color--bg;    
+    
+        @include responsive("phone", "max") {
+            box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+        }
+    
+        p {
+            font-size: 16px;
+            font-weight: 500;
+            
+            color: $grey-color;
+        }
+    }
+
+    .header-text__container {
+        padding: 50px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        
+        text-align: center;
+        
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+        
+            @include responsive("desktop") {
+                font-size: 40px;
+            }
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 300;
+        }
+    }
+}
