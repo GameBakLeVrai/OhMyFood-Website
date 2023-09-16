@@ -4,7 +4,12 @@ nav {
 
     @include flexbox($justify: space-between, $align: center);
 
-    img:last-child {
+    .left_arrow {
+        width: 18px;
+        height: 16px;
+    }
+
+    img {
         width: 162px;
         height: 44px;
     }
