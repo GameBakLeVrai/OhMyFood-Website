@@ -4,6 +4,16 @@
     @include text($fontSize: 24px, $fontWeight: 700);
 }
 
+// Card Text Class
+
+.card__title {
+    @include text($fontSize: 18px, $fontWeight: 700);
+}
+
+.card__subtitle {
+    @include text($fontSize: 17px, $fontWeight: 300);
+}
+
 // Menu Text Class
 
 .menu__title {
@@ -20,14 +30,4 @@
 
 .menu-card__subtitle {
     @include text($fontSize: 15.04px, $fontWeight: 300);
-}
-
-// Card Text Class
-
-.card__title {
-    @include text($fontSize: 18px, $fontWeight: 700);
-}
-
-.card__subtitle {
-    @include text($fontSize: 17px, $fontWeight: 300);
 }

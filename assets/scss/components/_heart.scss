@@ -1,0 +1,17 @@
+// Temporaire heart
+
+.heart {
+    width: 22px;
+    height: 22px;
+
+    background-image: url("/assets/images/icons/heart.svg");
+    background-repeat: no-repeat;
+}
+
+.heart:hover,
+.heart:focus {
+    width: 22px;
+    height: 22px;
+
+    background-image: url("/assets/images/icons/heart_gradiant.svg");
+}
