@@ -1,0 +1,66 @@
+.restaurants {
+    &__card {
+        position: relative;
+        width: 100%;
+
+        @include flexbox($direction: column);
+
+        .label {
+            position: absolute;
+
+            top: 15px;
+            right: 15px;
+
+            width: 80px;
+            height: 29px;
+
+            @include text($fontSize: 14px, $fontWeight: 500);
+            @include flexbox($justify: center, $align: center);
+            
+            background: #99E2D0;
+
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+            border-radius: 2px;
+
+            p {
+                color: #008766;
+            }
+        }
+
+        @include responsive("desktop") {
+            width: 46%;            
+        }
+    }
+
+    @include responsive("desktop") {
+        &__card:nth-child(2n-1) {
+            margin-right: 50px;
+        }
+
+        @media screen and (max-width: 1289px) {
+            &__card:nth-child(2n-1) {
+                margin-right: 2.65vw;
+            }
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: calc(231px + -57px);
+
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+
+        object-fit: cover;
+    }
+
+    &__text {
+        padding: 20px;
+        background: white;
+
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+
+        @include flexbox($justify: space-between, $align: center);
+    }
+}
