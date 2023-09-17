@@ -219,6 +219,61 @@ nav img:hover {
   }
 }
 
+footer {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  gap: 16px;
+  background: #353535;
+}
+footer h1 {
+  font-family: "Shrikhand", cursive;
+  color: white;
+  font-size: 21px;
+  font-weight: 400;
+}
+footer .footer__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+footer .footer__container a {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+}
+footer .footer__container .footer__items {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+footer .footer__container .footer__items a {
+  font-size: 16px;
+  font-weight: 500;
+}
+@media (min-width: 992px) {
+  footer {
+    flex-direction: row-reverse;
+    gap: 80px;
+  }
+  footer .footer__container {
+    flex-direction: unset;
+    align-items: center;
+  }
+  footer .footer__container:last-child {
+    margin-left: 30px;
+  }
+}
+
 header {
   background: #F6F6F6;
 }
