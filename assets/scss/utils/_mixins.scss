@@ -1,6 +1,6 @@
 /* ------------ FlexBox Mixin ------------*/
 
-@mixin flexbox($display: flex, $direction: row, $justify: flex-start, $align: stretch, $wrap: nowrap, $gap: 0px) {
+@mixin flexbox($display: flex, $direction: unset, $justify: unset, $align: unset, $wrap: unset, $gap: unset) {
     display: $display;
     flex-direction: $direction;
     justify-content: $justify;

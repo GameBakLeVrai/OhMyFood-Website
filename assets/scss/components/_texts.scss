@@ -18,10 +18,12 @@
 
 .menu__title {
     @include text($fontSize: 28px, $fontWeight: 400);
+    font-family: 'Shrikhand', cursive;
 }
 
 .menu__subtitle {
     @include text($fontSize: 16px, $fontWeight: 300);
+    text-transform: uppercase;
 }
 
 .menu-card__title {
@@ -30,4 +32,12 @@
 
 .menu-card__subtitle {
     @include text($fontSize: 15.04px, $fontWeight: 300);
+}
+
+.menu-card__price {
+    @include text($fontSize: 15.04px, $fontWeight: 700);
+
+    &:after {
+        content: "€";
+    }
 }

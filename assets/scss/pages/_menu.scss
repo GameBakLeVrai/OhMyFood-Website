@@ -1,0 +1,85 @@
+// Header
+.menu__header {
+    height: 275px;
+
+    img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+    @include responsive("desktop") {
+        height: 383px;
+    }
+}
+
+// Main
+.menu__main {
+    position: relative;
+    padding: 25px 15px 50px;
+
+    margin: -50px auto 0;
+    max-width: 1055px;
+    width: 100%;
+
+    z-index: 1;
+
+    background: $main-color--bg;
+
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    
+    @include flexbox($direction: column, $align: center, $gap: 40px);
+
+    .menu-text__container {
+        @include flexbox($justify: center, $align: center, $gap: 30px);
+    }
+
+    .menu-plat__container {
+        max-width: 634px;
+        width: 100%;
+
+        @include flexbox($direction: column, $gap: 12px);
+
+        hr {
+            width: 40px;
+            border: 3px solid $vert-color;
+        }
+
+        .menu__plat {
+            @include flexbox($direction: column, $gap: 12px);
+
+            .menu-card {
+                position: relative;
+                padding: 15px;
+
+                width: 100%;
+                height: 69px;
+
+                @include flexbox($justify: space-between, $align: center, $gap: 5px);
+
+                background: white;
+                border-radius: 15px;
+
+                div:first-child {
+                    @include flexbox($direction: column, $gap: 5px);
+                }
+
+                .menu-card__price {
+                    position: absolute;
+
+                    right: 15px;
+                    bottom: 15px;
+                }
+            }
+        }
+    }
+
+    @include responsive("desktop") {
+        margin: -30px auto 0;
+
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+    }
+}

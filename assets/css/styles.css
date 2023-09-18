@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ----------- Import Font ----------- */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 /* ----------- Default Setup ----------- */
@@ -91,11 +92,13 @@ a {
 .menu__title {
   font-size: 28px;
   font-weight: 400;
+  font-family: "Shrikhand", cursive;
 }
 
 .menu__subtitle {
   font-size: 16px;
   font-weight: 300;
+  text-transform: uppercase;
 }
 
 .menu-card__title {
@@ -108,15 +111,23 @@ a {
   font-weight: 300;
 }
 
+.menu-card__price {
+  font-size: 15.04px;
+  font-weight: 700;
+}
+.menu-card__price:after {
+  content: "€";
+}
+
 .restaurants__card {
   position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
-  flex-wrap: nowrap;
-  gap: 0px;
+  justify-content: unset;
+  align-items: unset;
+  flex-wrap: unset;
+  gap: unset;
 }
 .restaurants__card .label {
   position: absolute;
@@ -127,11 +138,11 @@ a {
   font-size: 14px;
   font-weight: 500;
   display: flex;
-  flex-direction: row;
+  flex-direction: unset;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
-  gap: 0px;
+  flex-wrap: unset;
+  gap: unset;
   background: #99E2D0;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   border-radius: 2px;
@@ -167,11 +178,11 @@ a {
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   display: flex;
-  flex-direction: row;
+  flex-direction: unset;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: nowrap;
-  gap: 0px;
+  flex-wrap: unset;
+  gap: unset;
 }
 
 .heart {
@@ -192,11 +203,11 @@ nav {
   padding: 0 20px 0;
   height: 63px;
   display: flex;
-  flex-direction: row;
+  flex-direction: unset;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: nowrap;
-  gap: 0px;
+  flex-wrap: unset;
+  gap: unset;
 }
 nav .left_arrow {
   width: 18px;
@@ -223,9 +234,9 @@ footer {
   padding: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
-  flex-wrap: nowrap;
+  justify-content: unset;
+  align-items: unset;
+  flex-wrap: unset;
   gap: 16px;
   background: #353535;
 }
@@ -238,9 +249,9 @@ footer h1 {
 footer .footer__container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
-  flex-wrap: nowrap;
+  justify-content: unset;
+  align-items: unset;
+  flex-wrap: unset;
   gap: 10px;
 }
 footer .footer__container a {
@@ -250,10 +261,10 @@ footer .footer__container a {
 }
 footer .footer__container .footer__items {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: stretch;
-  flex-wrap: nowrap;
+  flex-direction: unset;
+  justify-content: unset;
+  align-items: unset;
+  flex-wrap: unset;
   gap: 10px;
 }
 footer .footer__container .footer__items a {
@@ -280,10 +291,10 @@ header {
 header .header-top__container {
   height: 50px;
   display: flex;
-  flex-direction: row;
+  flex-direction: unset;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
+  flex-wrap: unset;
   gap: 20px;
   background: #EAEAEA;
 }
@@ -303,7 +314,7 @@ header .header-text__container {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
+  flex-wrap: unset;
   gap: 30px;
   text-align: center;
 }
@@ -322,8 +333,8 @@ header .header-text__container p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: stretch;
-  flex-wrap: nowrap;
+  align-items: unset;
+  flex-wrap: unset;
   gap: 20px;
 }
 
@@ -337,19 +348,19 @@ header .header-text__container p {
 .fonctionnements {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: unset;
   align-items: end;
-  flex-wrap: nowrap;
+  flex-wrap: unset;
   gap: 20px;
 }
 .fonctionnements__card {
   width: 100%;
   height: 72.38px;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  flex-direction: unset;
+  justify-content: unset;
   align-items: center;
-  flex-wrap: nowrap;
+  flex-wrap: unset;
   gap: 20px;
   font-size: 16px;
   font-weight: 500;
@@ -362,11 +373,11 @@ header .header-text__container p {
   width: 24px;
   height: 24px;
   display: flex;
-  flex-direction: row;
+  flex-direction: unset;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
-  gap: 0px;
+  flex-wrap: unset;
+  gap: unset;
   font-size: 14.18px;
   font-weight: 500;
   color: white;
@@ -386,9 +397,9 @@ header .header-text__container p {
 .restaurants {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
-  flex-wrap: nowrap;
+  justify-content: unset;
+  align-items: unset;
+  flex-wrap: unset;
   gap: 18px;
 }
 @media (min-width: 992px) {
@@ -396,6 +407,102 @@ header .header-text__container p {
     flex-direction: unset;
     flex-wrap: wrap;
     gap: 50px;
+  }
+}
+
+.menu__header {
+  height: 275px;
+}
+.menu__header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (min-width: 992px) {
+  .menu__header {
+    height: 383px;
+  }
+}
+
+.menu__main {
+  position: relative;
+  padding: 25px 15px 50px;
+  margin: -50px auto 0;
+  max-width: 1055px;
+  width: 100%;
+  z-index: 1;
+  background: #F6F6F6;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+  align-items: center;
+  flex-wrap: unset;
+  gap: 40px;
+}
+.menu__main .menu-text__container {
+  display: flex;
+  flex-direction: unset;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: unset;
+  gap: 30px;
+}
+.menu__main .menu-plat__container {
+  max-width: 634px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+  align-items: unset;
+  flex-wrap: unset;
+  gap: 12px;
+}
+.menu__main .menu-plat__container hr {
+  width: 40px;
+  border: 3px solid #99E2D0;
+}
+.menu__main .menu-plat__container .menu__plat {
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+  align-items: unset;
+  flex-wrap: unset;
+  gap: 12px;
+}
+.menu__main .menu-plat__container .menu__plat .menu-card {
+  position: relative;
+  padding: 15px;
+  width: 100%;
+  height: 69px;
+  display: flex;
+  flex-direction: unset;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: unset;
+  gap: 5px;
+  background: white;
+  border-radius: 15px;
+}
+.menu__main .menu-plat__container .menu__plat .menu-card div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+  align-items: unset;
+  flex-wrap: unset;
+  gap: 5px;
+}
+.menu__main .menu-plat__container .menu__plat .menu-card .menu-card__price {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+@media (min-width: 992px) {
+  .menu__main {
+    margin: -30px auto 0;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
   }
 }
 
