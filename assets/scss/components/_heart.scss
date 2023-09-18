@@ -1,6 +1,8 @@
 // Temporaire heart
 
 .heart {
+    cursor: pointer;
+
     width: 22px;
     height: 22px;
 
@@ -8,10 +10,10 @@
     background-repeat: no-repeat;
 }
 
-.heart:hover,
-.heart:focus {
+.heart:hover {
     width: 22px;
     height: 22px;
 
     background-image: url("/assets/images/icons/heart_gradiant.svg");
+    animation: fadeIn 0.3s backwards;
 }

@@ -56,6 +56,52 @@ a {
 /* ------------ FlexBox Mixin ------------*/
 /* ------------ Responsive Mixin ------------*/
 /* ------------ TextSize and Weight Mixin ------------*/
+/* ------------ Pulse animation effect ------------*/
+@keyframes shadowPulse {
+  33% {
+    background: #ff8ff0;
+    box-shadow: -24px 0 #5c0295, 24px 0 #ff8ff0;
+  }
+  66% {
+    background: #5c0295;
+    box-shadow: -24px 0 #ff8ff0, 24px 0 #ff8ff0;
+  }
+  100% {
+    background: #ff8ff0;
+    box-shadow: -24px 0 #ff8ff0, 24px 0 #5c0295;
+  }
+}
+/* ------------ Apparition with fade in effect ------------*/
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn__menu {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ------------ Disparition of Background with fade-out ------------*/
+@keyframes disappear {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 2s, opacity 2s linear;
+  }
+}
 .gradiant-button {
   cursor: pointer;
   width: 218px;
@@ -186,17 +232,18 @@ a {
 }
 
 .heart {
+  cursor: pointer;
   width: 22px;
   height: 22px;
   background-image: url("/assets/images/icons/heart.svg");
   background-repeat: no-repeat;
 }
 
-.heart:hover,
-.heart:focus {
+.heart:hover {
   width: 22px;
   height: 22px;
   background-image: url("/assets/images/icons/heart_gradiant.svg");
+  animation: fadeIn 0.3s backwards;
 }
 
 nav {
@@ -283,6 +330,30 @@ footer .footer__container .footer__items a {
   footer .footer__container:last-child {
     margin-left: 30px;
   }
+}
+
+/* ------------ Loader ------------*/
+.loader__container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  z-index: 1;
+  animation: disappear 1s 2s forwards;
+}
+.loader__container .loader {
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: #ff8ff0;
+  border-radius: 50%;
+  box-shadow: -24px 0 #ff8ff0, 24px 0 #ff8ff0;
+  box-sizing: border-box;
+  animation: shadowPulse 1s linear infinite;
 }
 
 header {
@@ -458,6 +529,11 @@ header .header-text__container p {
   align-items: unset;
   flex-wrap: unset;
   gap: 12px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  animation: fadeIn__menu 0.5s ease forwards;
+  animation-delay: 0.2s;
 }
 .menu__main .menu-plat__container hr {
   width: 40px;
@@ -471,6 +547,8 @@ header .header-text__container p {
   align-items: unset;
   flex-wrap: unset;
   gap: 12px;
+  animation: fadeIn__menu 0.8s ease forwards;
+  animation-delay: 0.2s;
 }
 .menu__main .menu-plat__container .menu__plat .menu-card {
   position: relative;

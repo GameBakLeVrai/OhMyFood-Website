@@ -29,7 +29,7 @@
 
     border-top-right-radius: 50px;
     border-top-left-radius: 50px;
-    
+
     @include flexbox($direction: column, $align: center, $gap: 40px);
 
     .menu-text__container {
@@ -47,10 +47,15 @@
             border: 3px solid $vert-color;
         }
 
+        opacity: 0;
+        transition: opacity 0.5s ease, transform 0.5s ease;        
+        animation: fadeIn__menu 0.5s ease forwards;
+
         .menu__plat {
             cursor: pointer;
-            
+
             @include flexbox($direction: column, $gap: 12px);
+            animation: fadeIn__menu 0.8s ease forwards;
 
             .menu-card {
                 position: relative;

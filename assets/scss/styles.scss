@@ -4,6 +4,7 @@
 // Utils Importation
 @import "./utils/variables";
 @import "./utils/mixins";
+@import "./utils/animations";
 
 // Components Importation
 @import "./components/buttons";
@@ -14,6 +15,7 @@
 // Layouts Importation
 @import './layouts/navbar';
 @import "./layouts/footer";
+@import "./layouts/loader";
 
 // Pages Importation
 @import "./pages/home";
