@@ -48,6 +48,8 @@
         }
 
         .menu__plat {
+            cursor: pointer;
+            
             @include flexbox($direction: column, $gap: 12px);
 
             .menu-card {
@@ -61,6 +63,11 @@
 
                 background: white;
                 border-radius: 15px;
+                box-shadow: 0 0 20px rgb(0 0 0 / 0.1);
+
+                &:hover {
+                    box-shadow: unset;
+                }
 
                 div:first-child {
                     @include flexbox($direction: column, $gap: 5px);

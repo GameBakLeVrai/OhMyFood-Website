@@ -464,6 +464,7 @@ header .header-text__container p {
   border: 3px solid #99E2D0;
 }
 .menu__main .menu-plat__container .menu__plat {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: unset;
@@ -484,6 +485,10 @@ header .header-text__container p {
   gap: 5px;
   background: white;
   border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.menu__main .menu-plat__container .menu__plat .menu-card:hover {
+  box-shadow: unset;
 }
 .menu__main .menu-plat__container .menu__plat .menu-card div:first-child {
   display: flex;
