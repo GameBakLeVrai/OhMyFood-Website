@@ -1,0 +1,58 @@
+
+/* ------------ Pulse animation effect ------------*/
+
+// Source : https://cssloaders.github.io/
+
+@keyframes shadowPulse {
+    33% {
+        background: #ff8ff0;
+        box-shadow: -24px 0 #5c0295, 24px 0 #ff8ff0;
+    }
+
+    66% {
+        background: #5c0295;
+        box-shadow: -24px 0 #ff8ff0, 24px 0 #ff8ff0;
+    }
+
+    100% {
+        background: #ff8ff0;
+        box-shadow: -24px 0 #ff8ff0, 24px 0 #5c0295;
+    }
+}
+
+/* ------------ Apparition with fade in effect ------------*/
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+}
+
+@keyframes fadeIn__menu {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ------------ Disparition of Background with fade-out ------------*/
+@keyframes disappear {
+    0% {        
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    100% {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s 2s, opacity 2s linear;
+    }
+}

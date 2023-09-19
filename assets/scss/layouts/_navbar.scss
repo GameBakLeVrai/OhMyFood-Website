@@ -1,0 +1,29 @@
+nav {
+    padding: 0 20px 0;
+    height: 63px;
+
+    @include flexbox($justify: space-between, $align: center);
+
+    .left_arrow {
+        width: 18px;
+        height: 16px;
+    }
+
+    img {
+        width: 162px;
+        height: 44px;
+    }
+
+    img:hover {
+        cursor: pointer;
+    }
+
+    @include responsive("desktop") {
+        height: 96px;
+
+        img {
+            width: 200px;
+            height: 34.2px;
+        }
+    }
+}

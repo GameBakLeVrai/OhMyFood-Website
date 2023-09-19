@@ -1,0 +1,44 @@
+footer {
+    padding: 30px;
+
+    @include flexbox($direction: column, $gap: 16px);
+    background: $grey-color;
+
+    h1 {
+        font-family: 'Shrikhand', cursive;
+        color: white;
+
+        @include text($fontSize: 21px, $fontWeight: 400);
+    }
+
+    .footer__container {
+        @include flexbox($direction: column, $gap: 10px);
+
+        a {
+            color: white;
+            @include text($fontSize: 16px, $fontWeight: 400);
+        }
+
+        .footer__items {
+            @include flexbox($gap: 10px);
+
+            a {
+                @include text($fontSize: 16px, $fontWeight: 500);
+            }
+        }
+    }
+
+    @include responsive("desktop") {
+        flex-direction: row-reverse;
+        gap: 80px;
+
+        .footer__container {
+            flex-direction: unset;
+            align-items: center;
+        }
+
+        .footer__container:last-child {
+            margin-left: 30px;
+        }
+    }
+}

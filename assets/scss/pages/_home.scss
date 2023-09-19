@@ -1,0 +1,107 @@
+// Header Section
+
+header {
+    background: $main-color--bg;
+
+    .header-top__container {
+        height: 50px;
+        
+        @include flexbox($justify: center, $align: center, $gap: 20px);        
+        background: $secondary-color--bg;    
+    
+        @include responsive("phone", "max") {
+            box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+        }
+    
+        p {
+            @include text($fontSize: 16px, $fontWeight: 500);
+            color: $grey-color;
+        }
+    }
+
+    .header-text__container {
+        padding: 50px;
+
+        @include flexbox($direction: column, $justify: center, $align: center, $gap: 30px);
+        text-align: center;
+
+        h1 {
+            @include responsive("desktop") {
+                font-size: 40px;
+            }
+        }
+
+        p {
+            @include text($fontSize: 18px, $fontWeight: 300);
+        }
+    }
+}
+
+// Fonctionnement and Restaurants Section
+
+.fonctionnement-and-restaurants__container {
+    padding: 50px 20px;
+    @include flexbox($direction: column, $justify: center, $gap: 20px);
+}
+
+@include responsive("desktop") {
+    .fonctionnement-and-restaurants__container {
+        margin: 0 auto;
+        max-width: 1300px;
+        width: 100%;
+    }
+}
+
+// Fonctionnement Section
+
+.fonctionnements {
+    @include flexbox($align: end, $direction: column, $gap: 20px);
+
+    &__card {
+        width: 100%;
+        height: 72.38px;
+        
+        @include flexbox($align: center, $gap: 20px);
+        @include text($fontSize: 16px, $fontWeight: 500);
+
+        background: #F7F7F7;
+    
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
+
+        span {
+            margin-left: -10px;
+
+            width: 24px;
+            height: 24px;
+
+            @include flexbox($justify: center, $align: center);
+            @include text($fontSize: 14.18px, $fontWeight: 500);
+
+            color: white;
+            background: $violet-color;
+
+            border-radius: 50%;
+        }
+    }
+
+    @include responsive("desktop", "min") {
+        flex-direction: unset;
+    }
+}
+
+// Restaurants Section
+
+.restaurants-bg {
+    background-color: $main-color--bg;
+}
+
+.restaurants {
+    @include flexbox($direction: column, $gap: 18px);
+
+    @include responsive("desktop") {
+        flex-direction: unset;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+}

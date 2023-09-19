@@ -1,0 +1,43 @@
+// Global Text Class
+
+.text__title {
+    @include text($fontSize: 24px, $fontWeight: 700);
+}
+
+// Card Text Class
+
+.card__title {
+    @include text($fontSize: 18px, $fontWeight: 700);
+}
+
+.card__subtitle {
+    @include text($fontSize: 17px, $fontWeight: 300);
+}
+
+// Menu Text Class
+
+.menu__title {
+    @include text($fontSize: 28px, $fontWeight: 400);
+    font-family: 'Shrikhand', cursive;
+}
+
+.menu__subtitle {
+    @include text($fontSize: 16px, $fontWeight: 300);
+    text-transform: uppercase;
+}
+
+.menu-card__title {
+    @include text($fontSize: 18px, $fontWeight: 500);
+}
+
+.menu-card__subtitle {
+    @include text($fontSize: 15.04px, $fontWeight: 300);
+}
+
+.menu-card__price {
+    @include text($fontSize: 15.04px, $fontWeight: 700);
+
+    &:after {
+        content: "€";
+    }
+}
