@@ -28,7 +28,7 @@ $breakpoints: (
 			@media (max-width: map-get($breakpoints, $breakpoint)) {
 				@content;
 			}
-		}		
+		}
 	}
 }
 
