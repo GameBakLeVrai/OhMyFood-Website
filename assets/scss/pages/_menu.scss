@@ -55,7 +55,7 @@
             cursor: pointer;
 
             @include flexbox($direction: column, $gap: 12px);
-            animation: fadeIn__menu 0.8s ease forwards;
+            animation: fadeIn__menu 1.3s ease forwards;
 
             .menu-card {
                 position: relative;

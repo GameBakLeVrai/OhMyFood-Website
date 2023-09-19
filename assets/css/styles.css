@@ -545,7 +545,7 @@ header .header-text__container p {
   align-items: unset;
   flex-wrap: unset;
   gap: 12px;
-  animation: fadeIn__menu 0.8s ease forwards;
+  animation: fadeIn__menu 1.3s ease forwards;
 }
 .menu__main .menu-plat__container .menu__plat .menu-card {
   position: relative;
